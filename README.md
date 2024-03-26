@@ -9,6 +9,14 @@ Download Models
 - <a href="https://huggingface.co/Jaward/mlx-bge-small-en">mlx-bge-small-en</a> converted mlx format of BAAI/bge-small-en, put it in the mlx-bge-small-en folder.
 - <a href="https://huggingface.co/Jaward/mlx-bge-small-en">bge-small-en</a> BERT format of BAAI/bge-small-en, put it in the bge-small-en folder.
 
-Run Code
-##
-<tab><tab>code/text here
+Convert pdf into mlx format vector database
+```
+python3 create_vdb.py --pdf mlx_docs.pdf --vdb vdb.npz
+```
+
+Convert pdf into mlx format vector database
+```
+python3 create_vdb.py --pdf mlx_docs.pdf --vdb vdb.npz
+```
+python3 rag_vdb.py --question "Teach me the basics of mlx"
+```
