@@ -76,7 +76,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--vdb",
         type=str,
-        default="qvdb.npz",
+        default="vdb.npz",
         help="The path to read the vector DB",
     )
     parser.add_argument(
