@@ -1,6 +1,6 @@
 # Copyright © 2023 Apple Inc.
 # Edited by: Jaward Sesay (Jaykef) 2024-26-04
-# File: generate.py - Generate a response to a question using a GGUF model
+# File: rag_vdb.py - retrieves data from vdb used in queryiing the base model.
 
 import argparse
 import time
