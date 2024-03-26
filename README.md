@@ -10,4 +10,5 @@ Download Models
 - <a href="https://huggingface.co/Jaward/mlx-bge-small-en">bge-small-en</a> BERT format of BAAI/bge-small-en, put it in the bge-small-en folder.
 
 Run Code
-
+##
+<tab><tab>code/text here
