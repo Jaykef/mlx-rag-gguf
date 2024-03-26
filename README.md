@@ -40,4 +40,4 @@ The files in the repo work as follow:
 - <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/utils.py">utils.py</a>: Utility function for accessing GGUF tokens.
 
 # Lincense
-Apache 2.0
+MIT
