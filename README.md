@@ -3,6 +3,11 @@ Minimal, clean code implementation of RAG with mlx inferencing for GGUF models.
 
 The code here builds on <a href="https://github.com/vegaluisjose/mlx-rag">https://github.com/vegaluisjose/mlx-rag</a>, it has been optimized to support RAG-based inferencing for .gguf models. I am using <a href="https://huggingface.co/BAAI/bge-small-en">BAAI/bge-small-en</a> for the embedding model, <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">TinyLlama-1.1B-Chat-v1.0-GGUF</a> as base model.
 
+## Demo
+
+https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/5fb262a9-81af-4a45-b9bb-37b501ff7936
+
+
 ## Usage
 Download Models (you can use hf's snapshot_download but I recommend downloading separately to save time)
 - <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">tinyllama-1.1b-chat-v1.0.Q4_0.gguf</a> put it in the tinyllama folder.
