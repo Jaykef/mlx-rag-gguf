@@ -6,6 +6,8 @@ The code here builds on <a href="https://github.com/vegaluisjose/mlx-rag">https:
 ## Usage
 Download Models
 - <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">tinyllama-1.1b-chat-v1.0.Q4_0.gguf</a> put it in the tinyllama folder.
-- <a href="https://huggingface.co/Jaward/mlx-bge-small-en">bge-small-en</a> converted mlx formart of BAAI/bge-small-en, put it in the mlx-bge-small-en folder
-- 
+- <a href="https://huggingface.co/Jaward/mlx-bge-small-en">mlx-bge-small-en</a> converted mlx format of BAAI/bge-small-en, put it in the mlx-bge-small-en folder.
+- <a href="https://huggingface.co/Jaward/mlx-bge-small-en">bge-small-en</a> BERT format of BAAI/bge-small-en, put it in the bge-small-en folder.
+
+Run Code
 
