@@ -12,7 +12,7 @@ https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/5fb262a9-81af-4a45-b9bb-3
 Download Models (you can use hf's snapshot_download but I recommend downloading separately to save time)
 - <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">tinyllama-1.1b-chat-v1.0.Q4_0.gguf</a> put it in the tinyllama folder.
 - <a href="https://huggingface.co/Jaward/mlx-bge-small-en">mlx-bge-small-en</a> converted mlx format of BAAI/bge-small-en, put it in the mlx-bge-small-en folder.
-- <a href="https://huggingface.co/Jaward/mlx-bge-small-en">bge-small-en</a> BERT format of BAAI/bge-small-en, put it in the bge-small-en folder.
+- <a href="https://huggingface.co/BAAI/bge-small-en/blob/main/model.safetensors">bge-small-en</a> Only need the model.safetensors file, put it in the bge-small-en folder.
 
 
 Install requirements
