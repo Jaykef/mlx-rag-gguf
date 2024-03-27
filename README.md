@@ -27,7 +27,7 @@ python3 create_vdb.py --pdf mlx_docs.pdf --vdb vdb.npz
 
 Query the model
 ```
-python3 rag_vdb.py --question "Teach the basics of mlx"
+python3 rag_vdb.py --question "Teach me the basics of mlx"
 ```
 
 The files in the repo work as follow:
@@ -41,5 +41,5 @@ The files in the repo work as follow:
 
 Queries make use of both .gguf (base model) and .npz (retrieval model) simultaneouly resulting in much higher inferencing speeds.
 
-## Lincense
+## License
 MIT
