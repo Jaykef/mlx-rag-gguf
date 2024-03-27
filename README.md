@@ -1,7 +1,7 @@
 # MLX RAG GGUF
 Minimal, clean code implementation of RAG with mlx inferencing for GGUF models.
 
-The code here builds on <a href="https://github.com/vegaluisjose/mlx-rag">https://github.com/vegaluisjose/mlx-rag</a>, it has been optimized to support RAG-based inferencing for .gguf models. I am using <a href="https://huggingface.co/BAAI/bge-small-en">BAAI/bge-small-en</a> for the embedding model, <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">TinyLlama-1.1B-Chat-v1.0-GGUF</a> as base model and the custom vector database script for indexing texts in a pdf file. Inference speed can go up to ~413 tokens/sec for prompts and ~36 tokens/sec for generation on my M2 Air.
+The code here builds on <a href="https://github.com/vegaluisjose/mlx-rag">https://github.com/vegaluisjose/mlx-rag</a>, it has been optimized to support RAG-based inferencing for .gguf models. I am using <a href="https://huggingface.co/BAAI/bge-small-en">BAAI/bge-small-en</a> for the embedding model, <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">TinyLlama-1.1B-Chat-v1.0-GGUF</a> as base model and the custom vector database script for indexing texts in a pdf file. Inference speeds can go up to ~413 tokens/sec for prompts and ~36 tokens/sec for generation on my M2 Air.
 
 ## Demo
 
@@ -35,7 +35,7 @@ The files in the repo work as follow:
 - <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/gguf.py">gguf.py</a>: Has all stubs for loading and inferencing .gguf models.
 - <a href="https://github.com/vegaluisjose/mlx-rag/blob/main/vdb.py">vdb.py</a>: Holds logic for creating a vector database from a pdf file and saving it in mlx format (.npz) .
 - <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/create_vdb.py">create_vdb.py</a>: It inherits from vdb.py and has all arguments used in creating a vector DB from a PDF file in mlx format (.npz).
-- <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/rag_vdb.py">rag_vdb.py</a>: Retrieves data from vdb used in queryiing the base model.
+- <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/rag_vdb.py">rag_vdb.py</a>: Retrieves data from vdb used in querying the base model.
 - <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/model.py">model.py</a>: Houses logic for the base model (with configs), embedding model and transformer encoder.
 - <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/utils.py">utils.py</a>: Utility function for accessing GGUF tokens.
 
