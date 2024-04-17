@@ -39,9 +39,9 @@ The files in the repo work as follow:
 - <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/model.py">model.py</a>: Houses logic for the base model (with configs), embedding model and transformer encoder.
 - <a href="https://github.com/Jaykef/mlx-rag-gguf/blob/main/utils.py">utils.py</a>: Utility function for accessing GGUF tokens.
 
-Checkout other cool mlx projects here: https://github.com/ml-explore/mlx/discussions/654#discussioncomment
-
 Queries make use of both .gguf (base model) and .npz (retrieval model) simultaneouly resulting in much higher inferencing speeds.
+
+Checkout other cool mlx projects here: https://github.com/ml-explore/mlx/discussions/654#discussioncomment
 
 ## License
 MIT
