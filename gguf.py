@@ -243,7 +243,7 @@ def translate_weight_names(name):
     name = name.replace("output_norm", "model.norm")
     name = name.replace("output", "lm_head")
     return name
-
+    
 
 def load(gguf_file: str, repo: str = None):
     # If the gguf_file exists, try to load model from it.
@@ -265,6 +265,7 @@ def load(gguf_file: str, repo: str = None):
     print(f"[INFO] Loading model from {gguf_file}")
     weights, metadata = mx.load(gguf_file, return_metadata=True)
     gguf_ft = metadata["general.file_type"]
+    print(f"[INFO] GGUF File Type: {gguf_ft}")
     if gguf_ft == 0 or gguf_ft == 1:
         # ALL_F32 or MOSTLY_F16
         quantization = None
@@ -272,9 +273,11 @@ def load(gguf_file: str, repo: str = None):
     elif gguf_ft == 2 or gguf_ft == 3:
         # MOSTLY_Q4_0 or MOSTLY_Q4_1
         quantization = {"group_size": 32, "bits": 4}
+        print("4 Bit Quantized")
     elif gguf_ft == 7:
         # MOSTLY_Q8_0 = 7
         quantization = {"group_size": 32, "bits": 8}
+        print("8 Bit Quantized")
     else:
         quantization = None
         print("[WARNING] Using unsupported GGUF quantization. Casting to float16.")
@@ -283,23 +286,15 @@ def load(gguf_file: str, repo: str = None):
     config = get_config(metadata)
     model = Model(ModelArgs(**config))
     if quantization is not None:
-        # quantized the LM head?
-        qm = model if "lm_head.scales" in weights else model.model
-        nn.QuantizedLinear.quantize_module(
-            qm,
+        class_predicate = (
+            lambda p, m: isinstance(m, (nn.Linear, nn.Embedding))
+            and f"{p}.scales" in weights
+        )
+        nn.quantize(
+            model,
             **quantization,
+            class_predicate=class_predicate,
         )
-
-    def dequantize(k):
-        weight = weights.pop(f"{k}.weight")
-        scales = weights.pop(f"{k}.scales")
-        biases = weights.pop(f"{k}.biases")
-        weights[f"{k}.weight"] = mx.dequantize(
-            weight, scales=scales, biases=biases, **quantization
-        )
-
-    # Dequantize embeddings
-    dequantize("model.embed_tokens")
 
     tokenizer = GGUFTokenizer(metadata)
     model.load_weights(list(weights.items()))
