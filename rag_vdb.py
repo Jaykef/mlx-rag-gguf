@@ -109,5 +109,5 @@ if __name__ == "__main__":
     m = VectorDB(args.vdb)
     context = m.query(args.question)
     args.question = TEMPLATE.format(context=context, question=args.question)
-    model, tokenizer = gguf.load("model/tinyllama-chat/tinyllama-1.1b-chat-v1.0.Q4_0.gguf")
+    model, tokenizer = gguf.load("models/tinyllama-chat/tinyllama-1.1b-chat-v1.0.Q4_0.gguf")
     rag(model, tokenizer, args.question, args.max_tokens, args.temp)
