@@ -17,14 +17,14 @@ def average_pool(last_hidden_state: mx.array, attention_mask: mx.array) -> mx.ar
 
 
 class ModelConfig(BaseModel):
-    dim: int = 384
-    num_attention_heads: int = 12
-    num_hidden_layers: int = 12
-    vocab_size: int = 30522
-    attention_probs_dropout_prob: float = 0.1
-    hidden_dropout_prob: float = 0.1
-    layer_norm_eps: float = 1e-12
-    max_position_embeddings: int = 512
+    dim: int
+    num_attention_heads: int
+    num_hidden_layers: int
+    vocab_size: int
+    attention_probs_dropout_prob: float
+    hidden_dropout_prob: float
+    layer_norm_eps: float
+    max_position_embeddings: int
 
 
 class TransformerEncoderLayer(nn.Module):
