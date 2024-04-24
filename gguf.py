@@ -21,6 +21,7 @@ class ModelArgs:
     num_attention_heads: int
     rms_norm_eps: float
     vocab_size: int
+    context_length: int
     num_key_value_heads: int = None
     rope_theta: float = 10000
     rope_traditional: bool = False
@@ -160,7 +161,23 @@ class LlamaModel(nn.Module):
             TransformerBlock(args=args) for _ in range(args.num_hidden_layers)
         ]
         self.norm = nn.RMSNorm(args.hidden_size, eps=args.rms_norm_eps)
-
+        # model info
+        print(
+            f"Model info\n"
+            f"==========\n"
+            f"Context length: {args.context_length}\n"
+            f"Hidden size: {args.hidden_size}\n"
+            f"Num layers: {args.num_hidden_layers}\n"
+            f"Num attention heads: {args.num_attention_heads}\n"
+            f"Num key value heads: {args.num_key_value_heads}\n"
+            f"RMSNorm epsilon: {args.rms_norm_eps}\n"
+            f"Vocab size: {args.vocab_size}\n"
+            f"RoPE theta: {args.rope_theta}\n"
+            f"RoPE traditional: {args.rope_traditional}\n"
+            f"\n"
+            f"Model Response"
+        )
+        
     def __call__(
         self,
         inputs: mx.array,
@@ -199,6 +216,7 @@ class Model(nn.Module):
 
 def get_config(metadata: dict):
     output = {
+        "context_length": metadata["llama.context_length"],
         "hidden_size": metadata["llama.embedding_length"],
         "num_hidden_layers": metadata["llama.block_count"],
         "num_attention_heads": metadata["llama.attention.head_count"],
