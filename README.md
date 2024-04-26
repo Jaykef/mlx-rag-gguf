@@ -4,7 +4,7 @@ Minimal, clean code implementation of RAG with mlx using gguf model weights.
 The code here builds on <a href="https://github.com/vegaluisjose/mlx-rag">https://github.com/vegaluisjose/mlx-rag</a>, it has been optimized to support RAG-based inferencing for .gguf models. I am using <a href="https://huggingface.co/BAAI/bge-small-en">BAAI/bge-small-en</a> for the embedding model, <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">TinyLlama-1.1B-Chat-v1.0-GGUF</a> (you can choose from supported models below) as base model and the custom vector database script for indexing texts in a pdf file. Inference speeds can go up to ~413 tokens/sec for prompts and ~36 tokens/sec for generation on my 8G M2 Air.
 
 ## Update
-- Added support for [phi-3-mini-4k-instruct.gguf](https://huggingface.co/Jaward/phi-3-mini-4k-instruct.Q4_0.gguf) and other Q4_0, Q4_1 & Q8_0 models, download and save model in models/phi-3-mini-instruct folder
+- Added support for [phi-3-mini-4k-instruct.gguf](https://huggingface.co/Jaward/phi-3-mini-4k-instruct.Q4_0.gguf) and other `Q4_0`, `Q4_1` & `Q8_0` quantized models, download and save model in models/phi-3-mini-instruct folder
 
 ## Demo
 
