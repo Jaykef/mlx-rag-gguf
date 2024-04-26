@@ -12,7 +12,7 @@ https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/5fb262a9-81af-4a45-b9bb-3
 
 
 ## Usage
-Download Models (you can use hf's snapshot_download but I recommend downloading separately to save time)
+Download Models (you can use hf's snapshot_download but I recommend downloading separately to save time). Save in models folder
 > [!NOTE]
 > MLX is able to read most quantization formats from GGUF directly. However,
 > only a few quantizations are supported directly: `Q4_0`, `Q4_1`, and `Q8_0`.
