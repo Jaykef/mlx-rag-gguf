@@ -48,7 +48,10 @@ python3 create_vdb.py --pdf mlx_docs.pdf --vdb vdb.npz
 
 Query the model
 ```
-python3 rag_vdb.py --question "Teach me the basics of mlx"
+python3 rag_vdb.py \
+    --question "Teach me the basics of mlx" \
+    --vdb "vdb.npz" \
+    --gguf "models/phi-3-mini-instruct/phi-3-mini-4k-instruct.Q4_0.gguf"
 ```
 
 The files in the repo work as follow:
