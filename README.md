@@ -18,7 +18,7 @@ Download Models (you can use hf's snapshot_download but I recommend downloading 
 > only a few quantizations are supported directly: `Q4_0`, `Q4_1`, and `Q8_0`.
 > Unsupported quantizations will be cast to `float16`.
 
-#### Tested/Supported models
+### Tested/Supported models
 
 Tinyllama Q4_0 and Q8_0
 - <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">tinyllama-1.1b-chat-v1.0.Q4_0.gguf</a> 
