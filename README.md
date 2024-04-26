@@ -1,3 +1,5 @@
+
+https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/e486889a-58cb-4312-a160-4402a8261378
 # MLX RAG With GGUF Model Weights
 Minimal, clean code implementation of RAG with mlx using gguf model weights.
 
@@ -8,8 +10,7 @@ The code here builds on <a href="https://github.com/vegaluisjose/mlx-rag">https:
 
 ## Demo
 
-https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/5fb262a9-81af-4a45-b9bb-37b501ff7936
-
+https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/e97907ed-1142-4f3e-b2fd-95690c4b50f3
 
 ## Usage
 Download Models (you can use hf's snapshot_download but I recommend downloading separately to save time). Save in models folder.
