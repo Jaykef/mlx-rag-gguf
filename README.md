@@ -13,9 +13,26 @@ https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/5fb262a9-81af-4a45-b9bb-3
 
 ## Usage
 Download Models (you can use hf's snapshot_download but I recommend downloading separately to save time)
-- <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">tinyllama-1.1b-chat-v1.0.Q4_0.gguf</a> put it in models/tinyllama-chat folder.
-- <a href="https://huggingface.co/Jaward/mlx-bge-small-en">mlx-bge-small-en</a> converted mlx format of BAAI/bge-small-en, put it in the mlx-bge-small-en folder.
-- <a href="https://huggingface.co/BAAI/bge-small-en/blob/main/model.safetensors">bge-small-en</a> Only need the model.safetensors file, put it in the bge-small-en folder.
+> [!NOTE]
+> MLX is able to read most quantization formats from GGUF directly. However,
+> only a few quantizations are supported directly: `Q4_0`, `Q4_1`, and `Q8_0`.
+> Unsupported quantizations will be cast to `float16`.
+
+Tested/Supported models
+Tinyllama Q4_0 and Q8_0
+- <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf">tinyllama-1.1b-chat-v1.0.Q4_0.gguf</a> 
+- <a href="https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/blob/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf">tinyllama-1.1b-chat-v1.0.Q8_0.gguf</a>
+
+Phi-3-mini Q4_0
+- <a href="https://huggingface.co/Jaward/phi-3-mini-4k-instruct.Q4_0.gguf">phi-3-mini-4k-instruct.Q4_0.gguf</a>
+
+Mistral Q4_0 and Q8_0
+- <a href="https://huggingface.co/TheBloke/Mistral-7B-v0.1-GGUF/blob/main/mistral-7b-v0.1.Q4_0.gguf">mistral-7b-v0.1.Q4_0.gguf</a>
+- <a href="https://huggingface.co/TheBloke/Mistral-7B-v0.1-GGUF/blob/main/mistral-7b-v0.1.Q8_0.gguf">mistral-7b-v0.1.Q8_0.gguf</a>
+
+Embedding models
+- <a href="https://huggingface.co/Jaward/mlx-bge-small-en">mlx-bge-small-en</a> converted mlx format of BAAI/bge-small-en, save it in the mlx-bge-small-en folder.
+- <a href="https://huggingface.co/BAAI/bge-small-en/blob/main/model.safetensors">bge-small-en</a> Only need the model.safetensors file, save it in the bge-small-en folder.
 
 
 Install requirements
