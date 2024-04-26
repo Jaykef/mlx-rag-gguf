@@ -1,5 +1,3 @@
-
-https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/e486889a-58cb-4312-a160-4402a8261378
 # MLX RAG With GGUF Model Weights
 Minimal, clean code implementation of RAG with mlx using gguf model weights.
 
