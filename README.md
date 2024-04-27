@@ -32,7 +32,7 @@ Mistral Q4_0 and Q8_0
 
 Embedding models
 - <a href="https://huggingface.co/Jaward/mlx-bge-small-en">mlx-bge-small-en</a> converted mlx format of BAAI/bge-small-en, save it in the mlx-bge-small-en folder.
-- <a href="https://huggingface.co/BAAI/bge-small-en/blob/main/model.safetensors">bge-small-en</a> Only need the model.safetensors file, save it in the bge-small-en folder.
+- <a href="https://huggingface.co/BAAI/bge-small-en/tree/main">bge-small-en</a> Only need the model.safetensors file, save it in the bge-small-en folder.
 
 
 Install requirements
