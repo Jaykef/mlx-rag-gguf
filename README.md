@@ -13,8 +13,7 @@ https://github.com/Jaykef/mlx-rag-gguf/assets/11355002/e97907ed-1142-4f3e-b2fd-9
 ## Usage
 Download Models (you can use hf's snapshot_download but I recommend downloading separately to save time). Save in models folder.
 > [!NOTE]
-> MLX is able to read most quantization formats from GGUF directly. However,
-> only a few quantizations are supported directly: `Q4_0`, `Q4_1`, and `Q8_0`.
+> MLX currently only support a few quantizations: `Q4_0`, `Q4_1`, and `Q8_0`.
 > Unsupported quantizations will be cast to `float16`.
 
 ### Tested/Supported models
